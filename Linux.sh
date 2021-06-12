@@ -11,4 +11,15 @@ docker run ubuntu sleep 100
 docker ps -a    # container will run because there is a task running
 docker exec <container_name> cat /etc/hosts # you can execute something inside container
 
+# Another example using centos
+docker ps
+docker run -d centos sleep 20
+docker ps
+docker ps -a
+
+# Executing bash inside container
+docker run centos
+docker run -it centos bash
+cat /etc/*release*
+
 
